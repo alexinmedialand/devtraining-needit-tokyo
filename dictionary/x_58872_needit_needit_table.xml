@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="061be4a897a221108a3ef5671153af5d" extends="task" label="NeedIt table" max_length="40" name="x_58872_needit_needit_table" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requestedfor" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hr" label="Request type" mandatory="true" max_length="40" name="u_requesttype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facil"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="leg"/>
+                <element inactive_on_update="false" label="Your Dpt Choice" sequence="3" value="dpt_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_whatneeded" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources 1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Human Resources 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="Facilities 1" sequence="2" value="facil1"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="3" value="facil2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="leg1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="5" value="leg2"/>
+                <element inactive_on_update="false" label="Your Dpt Choice 1" sequence="6" value="dpt_choice 1"/>
+                <element inactive_on_update="false" label="Your Dpt Choice 2" sequence="7" value="dpt_choice 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_whenneeded" type="glide_date_time"/>
+    </element>
+</database>
